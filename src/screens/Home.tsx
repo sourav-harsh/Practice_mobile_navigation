@@ -1,17 +1,18 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 
-const Home = () => {
+// @ts-ignore
+const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Home</Text>
-      <Button title="Profile" />
+      <Button title="Profile" onPress={() => navigation.navigate("Profile")} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: { },
+  container: {},
   text: {
     fontSize: 30,
     color: 'black',

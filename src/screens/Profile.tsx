@@ -1,11 +1,12 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 
-const Profile = () => {
+// @ts-ignore
+const Profile = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Profile</Text>
-      <Button title="Search" />
+      <Button title="Search" onPress={() => navigation.navigate("Search")} />
     </View>
   );
 };
